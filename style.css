@@ -1,0 +1,97 @@
+*{
+    box-sizing: border-box;
+}
+body{
+    background-color: rgb(110, 117, 255);
+}
+main{
+    background-color: azure;
+    width: 400px;
+    margin: 0px auto;
+    border-radius: 10px;
+    padding: 5px;
+}
+header input{
+    width: 95%;
+    height: 20px;
+    margin: 10px;
+    padding: 15px;
+    outline: none;
+    border-radius: 5px solid gray;
+}
+.article-ul{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 14px ;
+    padding-bottom: 15px;
+    border-bottom: 1px solid ;
+}
+.article-ul li{
+    list-style: none;
+    cursor: pointer;
+}
+button{
+    background-color: rgb(117, 100, 250);
+    border-radius: 5px;
+    border: none;
+    color: azure;
+    padding: 7px;
+    cursor: pointer;
+}
+.list-rest{
+    padding: 0;
+    margin: 10px;
+    list-style: none;
+}
+.todo-item{
+    display: flex;
+    align-items:center;
+    padding: 15px 0;
+    position: relative;
+    border-bottom: 1px solid gray;
+}
+
+.todo-iteam-actions {
+    position: absolute;
+    top: -12%;
+    left: 75%;
+    /* background-color: rgba(202, 121, 15, 0.605); */
+    /* padding: 15px; */
+    border-radius: 5px;
+    z-index: 2;
+    margin: 0;
+}
+.todo-iteam-actions li{
+    padding: 5px;
+
+}
+.todo-iteam-actions li:first-child{
+    padding-bottom: 5px;
+    border-bottom: 1px solid black ;
+}
+#span1{
+    margin-left: auto;
+}
+.ed-de{
+    background-color: rgba(202, 121, 15, 0.605);
+}
+#span1{
+    cursor: pointer;
+}
+
+.d-block{
+    display: block;
+}
+
+.d-none{
+    display: none;
+}
+
+.close_submenu{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
