@@ -60,6 +60,13 @@ function addElement(item) {
   newSpan1.textContent = "...";
   myLi.appendChild(newSpan1);
   todoitems.appendChild(myLi);
+
+   //
+   newUl.addEventListener("click", shows);
+   newLi2.addEventListener("click", function(){
+   todoitems.removeChild(myLi);
+ })
+//
 }
 const button = document.querySelector(".button");
 button.addEventListener("click", deleteli);
@@ -99,5 +106,4 @@ function closefun(){
   });
   this.classList.add("d-none");
 }
-
 
