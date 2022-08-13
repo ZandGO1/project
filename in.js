@@ -51,6 +51,7 @@ function addElement(item) {
 
   const newSpan = document.createElement("span");
   newSpan.className = "todo-item-text";
+  newSpan.setAttribute("value", "completed");
   newSpan.textContent = item;
   myLi.appendChild(newSpan);
 
@@ -80,9 +81,11 @@ function onCheckBoxClick(e) {
   let spanelm = e.target.nextElementSibling;
   if (e.target.checked == true) {
     spanelm.style.textDecoration = "line-through";
+    
   } else {
     spanelm.style.textDecoration = "none";
   }
+
 }
 
 function shows(e) {
@@ -107,3 +110,7 @@ function closefun(){
   this.classList.add("d-none");
 }
 
+function filtertodo (event){
+
+
+}
