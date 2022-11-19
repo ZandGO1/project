@@ -3,6 +3,14 @@ const todoitems = document.querySelector(".todo-items");
 let todo = [];
 let myTemp;
 
+const all = document.querySelector(".all");
+const Pending = document.querySelector(".pending");
+const completed = document.querySelector(".completed");
+
+// all.addEventListener("click" , filtertodo);
+// Pending.addEventListener("click" , filtertodo);
+// completed.addEventListener("click" , filtertodo);
+
 inputBox.addEventListener("keydown", function (e) {
   if (e.key == "Enter") {
     if (myTemp) {
@@ -35,7 +43,7 @@ function addElement(item) {
     inputBox.value = newSpan.textContent;
 
     myTemp = newSpan;
-    console.log(myTemp)
+    console.log(myTemp);
   });
   //
   const newLi2 = document.createElement("li");
@@ -51,7 +59,7 @@ function addElement(item) {
 
   const newSpan = document.createElement("span");
   newSpan.className = "todo-item-text";
-  newSpan.setAttribute("value", "completed");
+  // newSpan.setAttribute("value", "pending");
   newSpan.textContent = item;
   myLi.appendChild(newSpan);
 
@@ -62,12 +70,12 @@ function addElement(item) {
   myLi.appendChild(newSpan1);
   todoitems.appendChild(myLi);
 
-   //
-   newUl.addEventListener("click", shows);
-   newLi2.addEventListener("click", function(){
-   todoitems.removeChild(myLi);
- })
-//
+  //
+  newUl.addEventListener("click", shows);
+  newLi2.addEventListener("click", function () {
+    todoitems.removeChild(myLi);
+  });
+  //
 }
 const button = document.querySelector(".button");
 button.addEventListener("click", deleteli);
@@ -81,11 +89,11 @@ function onCheckBoxClick(e) {
   let spanelm = e.target.nextElementSibling;
   if (e.target.checked == true) {
     spanelm.style.textDecoration = "line-through";
-    
+    // spanelm.setAttribute("value" , "completed");
   } else {
     spanelm.style.textDecoration = "none";
+    // spanelm.setAttribute("value" ,"Pending");
   }
-
 }
 
 function shows(e) {
@@ -101,16 +109,12 @@ function shows(e) {
 const closeSubs = document.querySelector(".close_submenu");
 closeSubs.addEventListener("click", closefun);
 
-function closefun(){
-  console.log(this)
+function closefun() {
+  console.log(this);
   const itemss = document.querySelectorAll(".todo-iteam-actions");
-  itemss.forEach(function(element){
+  itemss.forEach(function (element) {
     element.classList.add("d-none");
   });
   this.classList.add("d-none");
 }
 
-function filtertodo (event){
-
-
-}
